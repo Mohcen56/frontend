@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Product Carousel
+
+A modern React/Next.js frontend for browsing and filtering products with a carousel UI.
+
+## Features
+
+- **Product Carousel:** Browse products in a responsive Swiper carousel.
+- **Filtering:** Filter products by price and popularity (rating).
+- **Responsive Design:** Works great on desktop and mobile.
+- **API Integration:** Fetches products from a backend API.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd frontend
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Create a `.env.local` file in the root directory and set your API base URL:
+
+   ```
+   NEXT_PUBLIC_API_BASE=https://backend-fy02.onrender.com
+   ```
+
+### Running the Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `components/` – React components (ProductCarousel, ProductCard, etc.)
+- `pages/` or `app/` – Next.js pages and routing
+- `.env.local` – Environment variables
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+- **API Endpoint:** Change `NEXT_PUBLIC_API_BASE` in `.env.local` to point to your backend.
+- **Styling:** Uses Tailwind CSS for easy customization.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Troubleshooting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Hydration Errors:** If you see hydration mismatch errors, try disabling browser extensions like Grammarly or shopping helpers.
+- **API Issues:** Ensure your backend is running and accessible at the URL in `.env.local`.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Made with ❤️ using React, Next.js,
