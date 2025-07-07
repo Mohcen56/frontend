@@ -65,10 +65,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - **Hydration Errors:** If you see hydration mismatch errors, try disabling browser extensions like Grammarly or shopping helpers.
 - **API Issues:** Ensure your backend is running and accessible at the URL in `.env.local`.
 
-## License
 
-MIT
-
----
 
 Made with ❤️ using React, Next.js,
