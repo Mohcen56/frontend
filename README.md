@@ -11,6 +11,7 @@ A modern React/Next.js frontend for browsing and filtering products with a carou
 
 ## Getting Started
 
+
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)

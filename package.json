@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  
   "dependencies": {
     "@fontsource/open-sans": "^5.2.6",
     "class-variance-authority": "^0.7.1",
