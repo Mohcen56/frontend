@@ -149,6 +149,12 @@ export default function ProductCarousel({ products }: ProductCarouselProps) {
         centeredSlides={false}
         className="mySwiper"
         style={{ paddingLeft: 0, paddingRight: 0, paddingBottom: 40, paddingTop: 80 }}
+        breakpoints={{
+          320: { slidesPerView: 1, spaceBetween: 12 },
+          640: { slidesPerView: 2, spaceBetween: 16 },
+          1024: { slidesPerView: 3, spaceBetween: 20 },
+          1280: { slidesPerView: 4, spaceBetween: 24 },
+        }}
       >
         {filteredProducts.map((product) => (
           <SwiperSlide key={product.id}>
