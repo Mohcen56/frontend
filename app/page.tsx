@@ -9,6 +9,7 @@ export default async function Page() {
   return (
     <main className="p-2">
       <h1 className="text-[45px] text-center font-avenir-book mt-10 mb-5">Product List</h1>
+      
       <ProductCarousel products={products} />
     </main>
   );

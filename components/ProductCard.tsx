@@ -31,6 +31,7 @@ export default function ProductCard({ product }: { product: Product }) {
       max_price: '500',
       min_popularity: '2',
     });
+    
     fetch(`/api/products/?${params}`)
       .then(res => res.json())
       .then(data => {
