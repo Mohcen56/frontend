@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 
 type Product = {
@@ -24,34 +24,18 @@ export default function ProductCard({ product }: { product: Product }) {
     white: product.image_white,
   };
 
-  // Example: fetch products with price between 100 and 500, popularity >= 2
-  useEffect(() => {
-    const params = new URLSearchParams({
-      min_price: '100',
-      max_price: '500',
-      min_popularity: '2',
-    });
-    
-    fetch(`/api/products/?${params}`)
-      .then(res => res.json())
-      .then(data => {
-        // data is the filtered product list
-        console.log(data);
-      });
-  }, []);
-
   return (
     <div>
       <Image
-        src={imageMap[selectedColor]}
+        src={imageMap[selectedColor] || '/fallback.jpg'}
         alt={product.name}
-        className=" h-48 object-cover rounded-2xl"
+        className="h-48 object-cover rounded-2xl"
         width={400}
         height={200}
       />
 
       <h2 className="mt-2 text-[15px] font-montserrat-medium">{product.name}</h2>
-      <p className="text-gray-700 text-base font-montserrat-regular">${product.price.toFixed(2)}</p>
+      <p className="text-gray-700 text-[15px] font-montserrat-regular">${product.price.toFixed(2)}</p>
       <div className="flex space-x-2 mt-3">
         {(['yellow', 'rose', 'white'] as const).map((color) => (
           <button
@@ -71,11 +55,8 @@ export default function ProductCard({ product }: { product: Product }) {
         ))}
       </div>
       {/* Selected color name at the bottom */}
-      <div className="mt-0 !text-left ">
-        <span
-          className="text-[12px] font-avenir-book text-gray-700"
-          style={{ fontFamily: 'Avenir-Book, sans-serif', fontSize: 12 }}
-        >
+      <div className="mt-0 text-left">
+        <span className="text-[12px] font-avenir-book text-gray-700">
           {selectedColor === 'yellow'
             ? 'Yellow Gold'
             : selectedColor === 'rose'
@@ -112,7 +93,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </svg>
           );
         })}
-        <span className="ml-2 text-[14px] font- Avenir - Book  text-gray-800">{product.rating.toFixed(1)}/5</span>
+        <span className="ml-2 text-[14px] font-avenir-book text-gray-800">{product.rating.toFixed(1)}/5</span>
       </div>
     </div>
   );
