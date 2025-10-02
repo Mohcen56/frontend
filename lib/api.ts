@@ -1,6 +1,5 @@
-// lib/api.ts
 
-// This fetches products from your backend API
+// This fetches products from  backend API
 export async function getProducts() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/products/`, {
     cache: 'no-store', // disables caching to always get fresh price

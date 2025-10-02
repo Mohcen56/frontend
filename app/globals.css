@@ -144,21 +144,21 @@
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('/fonts/montserrat-latin-400-normal.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Avenir-Book';
+  src: url('/Fonts/avenir/Avenir-Book.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('/fonts/montserrat-latin-500-normal.ttf') format('truetype');
+  src: url('/Fonts/montserat/Montserrat-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Avenir-Book';
-  src: url('/fonts/Avenir Book.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Montserrat';
+  src: url('/Fonts/montserat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
 
